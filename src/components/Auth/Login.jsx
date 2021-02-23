@@ -2,7 +2,9 @@ import React, { useState } from "react";
 // import { Navbar,Nav,NavDropdown} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Logsign.css';
-import axios from "../../axios";
+import axios from "../../Axios/axios";
+import authaxios from "../../Axios/authaxios";
+
 import { Redirect } from "react-router-dom";
 
 
@@ -20,16 +22,28 @@ function Login() {
 
     const handleFinalChange = e => {
         console.log(login);
+        const config={
+            headers:{
+               'Content-Type':'application/json'
+            }
+        }
 
 
-        axios.post('/user/login', login)
+        axios.post('/user/login', login,config)
             .then((res) => {
                 if (!res.data.auth) {
                 } else {
-                    let temp = res.data.result._id;
-                    localStorage.setItem("isLogin", true)
-
-                    window.location.replace('/');
+                    const token = res.data.token;
+                    const auth = res.data.auth;
+                    let id = res.data.result._id;
+                    let uname = res.data.result.uname;
+                    console.log(token,auth,id,uname)
+                    localStorage.setItem("isLogin",auth)
+                    localStorage.setItem("user", id)
+                    localStorage.setItem("token", token)
+                    localStorage.setItem("uname", uname)
+                    
+                    // window.location.replace('/');    
 
                 }
             })

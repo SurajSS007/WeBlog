@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom'
 import './dashboard.css';
-import axios from "../../axios";
+import axios from "../../Axios/axios";
 
 function BlogById({ match }) {
     const [getBlogById, setGetBlogById] = useState([]);

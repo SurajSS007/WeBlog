@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 function Logout() {
 
     useEffect(()=>{
-        localStorage.removeItem("isLogin")
+        localStorage.clear();
     })
 
     return (

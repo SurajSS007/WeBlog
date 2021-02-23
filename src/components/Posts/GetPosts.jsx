@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from "../../axios";
+import authaxios from "../../Axios/authaxios";
 import { Card,Button } from "react-bootstrap";
 import './GetPost.css';
 
@@ -8,18 +8,18 @@ function GetPosts() {
         fetchItem()
             .then(res => {
                 setPosts(res.data)
+                console.log(res.data);
             });
     },[])
     const [post, setPosts] = useState([]);
     const fetchItem = async () => {
-        const course = await axios.get(`/user/getPosts`)
-        console.log(course);
+        const course = await authaxios.get(`/user/getPosts`)
         return course
     };
 
     return (
       <div className="containMain">
-      { post && post.map(item => {
+      { post.blogs && post.blogs.map(item => {
         return <div className="contain">
           <Card  className="card" style={{ width: '18rem' }}>
               <Card.Img variant="top"  src={item.image} alt="No Img Found" style={{ height: 200 }} />

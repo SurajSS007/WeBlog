@@ -4,14 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom'
 import './addpost.css';
-import axios from "../../axios";
+import authaxios from "../../Axios/authaxios";
 function AddPost() {
 
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
         data.image = image
         console.log(data);
-        axios.post('/blog', data)
+        authaxios.post('/blog', data)
             .then(res => {
                 console.log(res);
                 // window.location.replace('/')
