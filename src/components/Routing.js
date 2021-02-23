@@ -4,6 +4,7 @@ import navbar from './Navbar/navbar.jsx'
 import Login from "./Auth/Login";
 import Signup from "./Auth/Signup";
 import dashboard from './Dashboard/dashboard'
+import BlogById from './Dashboard/BlogById'
 import ProtectedRoute from "./ProtectedRoute";
 import addPost from "./Posts/addPost";
 import getPost from "./Posts/getPost";
@@ -13,6 +14,7 @@ function Routing() {
         <div >
             <Route path="/"  component={navbar} />
             <Route path="/" exact component={dashboard} />
+            <Route path="/:id" exact component={BlogById} />
             <Route path="/login"  component={Login} />
             <Route path="/signup"  component={Signup} />
             <ProtectedRoute isAuth={localStorage.getItem("isLogin")} path="/blog/getPosts" exact component={addPost} />
