@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card,Button } from "react-bootstrap";
 
-function dashboard() {
+function Dashboard() {
     
 
     return (
@@ -23,4 +23,4 @@ function dashboard() {
     )
 }
 
-export default dashboard
+export default Dashboard
