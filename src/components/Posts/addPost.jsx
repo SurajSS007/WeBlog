@@ -14,7 +14,7 @@ function AddPost() {
         authaxios.post('/blog', data)
             .then(res => {
                 console.log(res);
-                // window.location.replace('/')
+                window.location.replace('/')
             })
     };
     const [image, setImage] = useState('');

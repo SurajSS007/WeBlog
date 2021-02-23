@@ -43,7 +43,7 @@ function Login() {
                     localStorage.setItem("token", token)
                     localStorage.setItem("uname", uname)
                     
-                    // window.location.replace('/');    
+                    window.location.replace('/');    
 
                 }
             })
