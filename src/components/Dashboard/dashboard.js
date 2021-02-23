@@ -30,7 +30,7 @@ function Dashboard() {
               <Card.Title  style={{"textDecoration":'underline'}}>{item.title}</Card.Title>
                 <Card.Subtitle  >{item.description}</Card.Subtitle>
                 <br></br>
-                <Button href={`/${item._id}`} variant="primary">Check BLOG</Button>
+                <Button href={`/BlogById/${item._id}`} variant="primary">Check BLOG</Button>
               </Card.Body>
             </Card>
         </div >

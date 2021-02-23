@@ -2,14 +2,13 @@ import React from 'react'
 import { Navbar, Button, FormControl, Form, Nav } from "react-bootstrap";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-function navbar() {
+function Navbar1() {
   return (
     <div>
 
       <Navbar bg="primary" variant="dark">
         <Navbar.Brand href="/">WeBlog</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/allblogs">AllPosts</Nav.Link>
         </Nav>
         <Form inline>
           <Nav.Link href="/login"><Button variant="light">SignIn</Button></Nav.Link>
@@ -23,4 +22,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar1

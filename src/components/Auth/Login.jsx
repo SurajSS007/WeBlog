@@ -29,7 +29,7 @@ function Login() {
                     let temp = res.data.result._id;
                     localStorage.setItem("isLogin", true)
 
-                    // window.location.reload();
+                    window.location.replace('/');
 
                 }
             })

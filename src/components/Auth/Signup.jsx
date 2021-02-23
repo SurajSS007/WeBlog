@@ -50,7 +50,7 @@ function Signup() {
             
                     <Button type="submit" className="btn btn-primary btn-block" variant='primary'>Sign Up</Button>
                     <p className="forgot-password text-right">
-                        Already registered <a href="Login">sign in?</a>
+                        Already registered <a href="/login">sign in?</a>
                     </p>
                 </div>
             </div>
